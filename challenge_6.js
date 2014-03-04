@@ -8,6 +8,27 @@ exports.SumOfASquare = SumOfASquare;
 
 function SumOfASquare(naturalNumbers){
   this.naturalNumbers = naturalNumbers;
+
+  this.sumOfSquares = function() {
+    var sumSquare = 0;
+    for (var i = 1; i < this.naturalNumbers + 1; i++) {
+        sumSquare += Math.pow(i, 2);
+
+    }
+    console.log(sumSquare);
+    return sumSquare;
+  };
+
+  this.squareOfTheSums = function() {
+    var squareSum = 0;
+    var sum = 0;
+    for (var i = 1; i < this.naturalNumbers +1; i++) {
+        sum += i;
+    }
+    squareSum = Math.pow(sum, 2);
+    console.log(squareSum);
+    return squareSum;
+  }
 }
 
 // do work here
